@@ -1,0 +1,144 @@
+.load-neutrons {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  outline: 1px solid red;
+}
+
+.load-neutron {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.load-neutron::before {
+  content: "";
+  width: 34px;
+  height: 34px;
+  border-radius: 49px;
+  background: rgb(251,211,1);
+  position: absolute;
+  left: 50%;
+  transform: translateY(0);
+  margin-left: -17.5px;
+  margin-top: -17.5px;
+}
+
+.load-neutron:nth-child(5)::before {
+  z-index: 100;
+  width: 44.5px;
+  height: 44.5px;
+  margin-left: -21.75px;
+  margin-top: -21.75px;
+  animation: load-neutrons 4.6s ease infinite;
+}
+
+.load-neutron:nth-child(1) {
+  animation: load-neutron-rotate-1 4.6s 0s linear infinite;
+}
+
+.load-neutron:nth-child(1)::before {
+  background-color: rgb(255,50,112);
+  animation: load-neutron-move 4.6s 0s ease infinite;
+}
+
+.load-neutron:nth-child(2) {
+  animation: load-neutron-rotate-2 4.6s 1.15s linear infinite;
+}
+.load-neutron:nth-child(2)::before {
+  background-color: rgb(32,139,241);
+  animation: load-neutron-move 4.6s 1.15s ease infinite;
+}
+
+.load-neutron:nth-child(3) {
+  animation: load-neutron-rotate-3 4.6s 2.3s linear infinite;
+}
+
+.load-neutron:nth-child(3)::before {
+  background-color: rgb(175,225,2);
+  animation: load-neutron-move 4.6s 2.3s ease infinite;
+}
+
+.load-neutron:nth-child(4) {
+  animation: load-neutron-rotate-4 4.6s 3.45s linear infinite;
+}
+.load-neutron:nth-child(4)::before {
+  background-color: rgb(251,211,1);
+  animation: load-neutron-move 4.6s 3.45s ease infinite;
+}
+
+@keyframes load-neutron-move {
+  0%, {
+    transform: translateY(0);
+  }
+  /* 18%, 22% {
+    transform: translateY(-100px);
+  } */
+  40%, 66% {
+    transform: translateY(-100px);
+  }
+  /* 82%, 100% {
+    transform: translateY(-100px); */
+  }
+}
+
+@keyframes load-neutron-colors {
+  0% {
+    background-color: rgb(251,211,1);
+  }
+  25% {
+    background-color: rgb(255,50,112);
+  }
+  50% {
+    background-color: rgb(32,139,241);
+  }
+  75% {
+    background-color: rgb(175,225,2);
+  }
+  100% {
+    background-color: rgb(251,211,1);
+  }
+}
+
+@keyframes load-neutron-rotate-1 {
+  0% {
+    transform: rotate(-105deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes load-neutron-rotate-2 {
+  0% {
+    transform: rotate(165deg);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
+}
+
+@keyframes load-neutron-rotate-3 {
+  0% {
+    transform: rotate(435deg);
+  }
+  100% {
+    transform: rotate(810deg);
+  }
+}
+
+@keyframes load-neutron-rotate-4 {
+  0% {
+    transform: rotate(705deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
